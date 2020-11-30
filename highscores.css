@@ -1,0 +1,76 @@
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+  transform: scale(1.025);
+}
+
+/* lighting */
+.finalScore {
+  margin-bottom: 50px;
+  padding: 0;
+  display: flex;
+}
+
+.finalScore .finalScore-item {
+  list-style: none;
+  color: #48484848;
+  font-size: 50px;
+  letter-spacing: 5px;
+  animation: lighting 1.4s linear infinite;
+}
+
+.finalScore .finalScore-item:nth-child(1) {
+  animation-delay: 0s;
+}
+.finalScore .finalScore-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.finalScore .finalScore-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.finalScore .finalScore-item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.finalScore .finalScore-item:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.finalScore .finalScore-item:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.finalScore .finalScore-item:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.finalScore .finalScore-item:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.finalScore .finalScore-item:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.finalScore .finalScore-item:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes lighting {
+  0% {
+    color: #484848;
+    text-shadow: none;
+  }
+  90% {
+    color: #484848;
+    text-shadow: none;
+  }
+
+  100% {
+    color: #fff900;
+    text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+  }
+}

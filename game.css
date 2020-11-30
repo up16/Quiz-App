@@ -1,0 +1,141 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.1rem solid #845bb3;
+  background-color: #d0bdf4;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 lavenderblush;
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #845bb3;
+  color: #d0bdf4;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.correct {
+  background-color: #d0bdf4;
+  position: relative;
+  overflow: hidden;
+}
+.correct:before {
+  content: "";
+  background-color: #28a745;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transform: skew(-15deg);
+  animation: moving 1.2s linear infinite;
+}
+
+.incorrect {
+  background-color: #dc3545;
+  animation: shake 0.3s linear 1;
+}
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 4rem;
+  border: 0.3rem solid #845bb3;
+  margin-top: 1.5rem;
+}
+
+#progressBarFull {
+  height: 3.4rem;
+  background-color: #845bb3;
+  width: 0%;
+}
+
+/* LOADER */
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #845bb3;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  33% {
+    transform: rotate(10deg);
+  }
+  66% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes moving {
+  from {
+    left: -120px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* BACK */
+.background {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://image.freepik.com/free-vector/urban-city-background-video-conferencing_52683-46410.jpg");
+  background-position: bottom left;
+  animation: driving 15s linear infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes driving {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}
