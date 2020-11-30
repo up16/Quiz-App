@@ -6,3 +6,4 @@
 3. Generate dynamic HTML using fetch for API
 4. Fetch trivia questions for quiz via Open Trivia DB API
 5. CSS - flexbox, Animations
+6. Advanced CSS: Animations, Transitions and Transforms used.
